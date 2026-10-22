@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exp10-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: exp10-python
+  template:
+    metadata:
+      labels:
+        app: exp10-python
+    spec:
+      containers:
+        - name: python-app
+          image: exp10-python-app:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000

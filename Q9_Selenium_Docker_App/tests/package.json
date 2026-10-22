@@ -1,0 +1,12 @@
+{
+  "name": "q9-selenium-docker-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Selenium test cases for a Flask application running in Docker",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.25.0"
+  }
+}
